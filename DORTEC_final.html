@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#071d2c">
+<meta name="description" content="DORTEC - حلول متكاملة للبوابات والشيش الحصيرة والأبواب الأوتوماتيكية.">
+<title>DORTEC | بوابات وأبواب أوتوماتيكية</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#071d2c;--navy2:#102b40;--gold:#d9a844;--gold2:#efc76c;--ink:#142536;--muted:#607080;--paper:#f5f6f7;--white:#fff;--line:#dce1e5;--shadow:0 16px 45px rgba(4,24,38,.12)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{font-family:"Cairo",sans-serif;color:var(--ink);background:var(--paper);line-height:1.7}
+a{color:inherit;text-decoration:none}
+button{font:inherit;cursor:pointer}
+.container{width:min(1180px,92%);margin:auto}
+.topbar{background:#041720;color:#e9edf0;font-size:12px;padding:8px 0}
+.topbar .container{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.topbar a{margin-inline:7px;color:#f4d48d}
+header{height:78px;background:#fff;position:sticky;top:0;z-index:50;box-shadow:0 3px 18px rgba(0,0,0,.07)}
+.nav{height:100%;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.logo{display:flex;align-items:center;gap:10px;font-family:Montserrat,sans-serif;font-size:30px;font-weight:800;letter-spacing:1px;color:var(--navy);direction:ltr}
+.logo-mark{width:42px;height:42px;border:3px solid var(--gold);border-left:0;border-radius:0 22px 22px 0;display:grid;place-items:center;color:var(--gold);font-size:24px;font-weight:800}
+.logo small{display:block;font:700 8px Montserrat,sans-serif;letter-spacing:1.2px;text-align:left;color:#53616b;margin-top:-5px}
+.navlinks{display:flex;align-items:center;gap:28px;font-size:14px;font-weight:700}
+.navlinks a{transition:.2s}.navlinks a:hover{color:#b8862f}
+.nav-actions{display:flex;align-items:center;gap:10px}
+.lang,.menu-btn{border:1px solid var(--gold);background:transparent;color:var(--navy);border-radius:24px;padding:7px 16px;font-weight:700}
+.menu-btn{display:none;border-color:var(--line);font-size:21px;padding:2px 11px}
+.hero{min-height:490px;display:flex;align-items:center;position:relative;color:#fff;background:linear-gradient(90deg,rgba(3,15,23,.9) 0%,rgba(3,15,23,.68) 42%,rgba(3,15,23,.1) 100%),url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=2000&q=85') center/cover no-repeat}
+.hero-content{padding:78px 0;max-width:590px}
+.eyebrow{color:var(--gold2);font:700 13px Montserrat,sans-serif;letter-spacing:4px;text-transform:uppercase;margin-bottom:13px}
+.hero h1{font-size:clamp(34px,5vw,58px);line-height:1.22;font-weight:900;margin-bottom:18px}
+.hero h1 span{color:var(--gold2)}
+.hero p{font-size:16px;color:#e2e8ed;max-width:520px;margin-bottom:27px}
+.actions{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;border:1px solid transparent;border-radius:5px;padding:12px 23px;font-weight:800;transition:.2s}
+.btn-gold{background:linear-gradient(135deg,var(--gold),var(--gold2));color:#142536}
+.btn-gold:hover{transform:translateY(-2px);box-shadow:0 8px 20px #0003}
+.btn-outline{border-color:#fff;color:#fff;background:#ffffff0c}
+.btn-outline:hover{background:#fff;color:var(--navy)}
+.section{padding:65px 0}
+.section-head{margin-bottom:28px}
+.section-head .eyebrow{color:#b48737;margin-bottom:4px}
+.section-head h2{font-size:clamp(25px,3vw,35px);line-height:1.3;color:var(--navy);font-weight:900}
+.section-head p{color:var(--muted);margin-top:8px;max-width:650px}
+.products{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.product-card{background:#fff;border:1px solid var(--line);border-radius:10px;overflow:hidden;box-shadow:0 5px 18px rgba(12,34,50,.04);transition:.25s}
+.product-card:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
+.product-card img{width:100%;height:190px;object-fit:cover;display:block;background:#dce2e6}
+.product-body{padding:19px}
+.product-icon{width:43px;height:43px;border-radius:9px;background:var(--navy);color:var(--gold2);display:grid;place-items:center;font-size:22px;margin-top:-42px;position:relative;border:3px solid white}
+.product-body h3{font-size:18px;color:var(--navy);margin:8px 0 5px}
+.product-body p{font-size:13px;color:var(--muted);min-height:52px}
+.more{display:inline-block;color:#a5792d;font-size:13px;font-weight:800;margin-top:12px}
+.about{background:#fff}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:42px;align-items:center}
+.about-photo{position:relative}
+.about-photo img{width:100%;height:390px;object-fit:cover;border-radius:12px;display:block}
+.experience{position:absolute;bottom:16px;right:16px;left:16px;background:rgba(4,30,35,.94);color:#fff;border-radius:9px;padding:15px 20px;display:flex;justify-content:space-between;align-items:center;gap:10px}
+.experience strong{color:var(--gold2);font-size:19px}
+.about-copy h2{font:800 clamp(30px,4vw,43px) Montserrat,sans-serif;color:var(--navy);direction:ltr;text-align:right;margin:4px 0 14px}
+.about-copy>p{color:#536270;margin-bottom:22px}
+.about-points{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:25px 0}
+.point{text-align:center;border-left:1px solid var(--line);padding:8px}
+.point:last-child{border:0}
+.point .symbol{font-size:26px;color:#b98c3d}
+.point b{display:block;color:var(--navy);font-size:13px}
+.point span{font-size:12px;color:var(--muted)}
+.benefits{background:linear-gradient(120deg,#061a29,#12334b);color:#fff;padding:42px 0}
+.benefit-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.benefit{text-align:center;border-left:1px solid rgba(224,190,119,.55);padding:5px 15px}
+.benefit:last-child{border:0}
+.benefit .symbol{font-size:30px;color:var(--gold2)}
+.benefit h3{font-size:16px;margin:5px 0}
+.benefit p{font-size:12px;color:#d1dbe2}
+.process{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:25px}
+.step{border-left:1px solid var(--line);padding:5px 15px}
+.step:last-child{border:0}
+.step strong{font:800 28px Montserrat,sans-serif;color:#c59642;display:block}
+.step h3{font-size:16px;color:var(--navy);margin:2px 0}
+.step p{font-size:12px;color:var(--muted)}
+.contact-band{background:#e8edf1;border-radius:12px;padding:24px;display:flex;align-items:center;justify-content:space-between;gap:20px;margin-top:35px}
+.contact-band h3{color:var(--navy);font-size:21px}
+.contact-band p{color:var(--muted);font-size:13px}
+footer{background:#041722;color:#d9e1e6;padding:34px 0 18px}
+.footer-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:30px}
+footer .logo{color:white;margin-bottom:12px}
+footer p,footer a{font-size:13px;color:#c3cdd4}
+footer h3{color:var(--gold2);font-size:16px;margin-bottom:10px}
+footer a{display:block;margin:5px 0}
+.copyright{border-top:1px solid #ffffff20;margin-top:25px;padding-top:14px;font-size:11px;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;color:#aab7c0}
+.float-wa{position:fixed;bottom:20px;left:20px;z-index:40;background:#1fa765;color:white;border-radius:50px;padding:11px 17px;font-weight:800;box-shadow:0 6px 20px #0003}
+.toast{position:fixed;bottom:80px;left:20px;background:#102b40;color:white;padding:12px 18px;border-radius:8px;display:none;z-index:100}
+[dir="ltr"] body{text-align:left}
+[dir="ltr"] .hero{background-image:linear-gradient(90deg,rgba(3,15,23,.9) 0%,rgba(3,15,23,.68) 42%,rgba(3,15,23,.1) 100%),url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=2000&q=85')}
+[dir="ltr"] .about-copy h2{text-align:left}
+@media(max-width:900px){.navlinks{gap:15px}.products{grid-template-columns:repeat(2,1fr)}.benefit-grid{grid-template-columns:repeat(2,1fr)}.benefit:nth-child(2){border:0}.about-grid{gap:25px}}
+@media(max-width:650px){header{height:68px}.logo{font-size:25px}.logo-mark{width:36px;height:36px}.menu-btn{display:block}.navlinks{display:none;position:absolute;top:68px;right:0;left:0;background:white;padding:16px 5%;box-shadow:0 10px 15px #0002;flex-direction:column;align-items:stretch;gap:0}.navlinks.open{display:flex}.navlinks a{padding:10px 0;border-bottom:1px solid #eee}.hero{min-height:500px;background-position:58% center}.hero-content{padding:65px 0}.hero p{font-size:14px}.section{padding:48px 0}.products{grid-template-columns:1fr;gap:14px}.product-card{display:grid;grid-template-columns:42% 58%}.product-card img{height:100%;min-height:190px}.product-body{padding:14px}.product-icon{margin-top:0}.product-body p{min-height:0}.about-grid{grid-template-columns:1fr}.about-photo img{height:280px}.about-copy h2{text-align:right}.about-points{gap:4px}.benefit-grid{gap:12px}.benefit{padding:5px 8px}.process{grid-template-columns:repeat(2,1fr);gap:15px}.step:nth-child(2){border:0}.contact-band{align-items:flex-start;flex-direction:column}.footer-grid{grid-template-columns:1fr;gap:20px}.copyright{flex-direction:column}.topbar .container{justify-content:center;text-align:center}.float-wa{bottom:13px;left:13px}}
+@media(max-width:380px){.product-card{grid-template-columns:1fr}.product-card img{height:175px}.nav-actions{gap:5px}.lang{padding:6px 10px}}
+</style>
+</head>
+<body>
+<div class="topbar"><div class="container"><div><a href="tel:+201024413139">☎ 01024413139</a></div><div data-ar="جودة . أمان . تصميم عصري" data-en="Quality . Safety . Modern design">جودة . أمان . تصميم عصري</div></div></div>
+<header><div class="container nav">
+<a class="logo" href="#home" aria-label="DORTEC"><span class="logo-mark">D</span><span>DORTEC<small>GATES · SHUTTERS · AUTOMATIC DOORS</small></span></a>
+<nav class="navlinks" id="navlinks">
+<a href="#home" data-ar="الرئيسية" data-en="Home">الرئيسية</a><a href="#products" data-ar="منتجاتنا" data-en="Products">منتجاتنا</a><a href="#about" data-ar="من نحن" data-en="About us">من نحن</a><a href="#process" data-ar="كيف نعمل" data-en="How we work">كيف نعمل</a><a href="#contact" data-ar="تواصل معنا" data-en="Contact">تواصل معنا</a>
+</nav>
+<div class="nav-actions"><button class="lang" id="langBtn" type="button">English</button><button class="menu-btn" id="menuBtn" type="button" aria-label="فتح القائمة">☰</button></div>
+</div></header>
+<main>
+<section class="hero" id="home"><div class="container"><div class="hero-content">
+<div class="eyebrow">DORTEC — SMART ENTRANCES</div>
+<h1 data-ar="بوابات وأبواب تفتح لك الطريق <span>بأسلوبك.</span>" data-en="Doors and gates that open the way <span>you live.</span>">بوابات وأبواب تفتح لك الطريق <span>بأسلوبك.</span></h1>
+<p data-ar="حلول متكاملة للبوابات والشيش الحصيرة والأبواب الأوتوماتيكية. تصميمات عصرية وجودة عالية لتوفير الأمان والخصوصية لمنزلك ومشروعك." data-en="Complete solutions for automatic gates, roller shutters and automatic doors. Modern designs and dependable quality for homes and businesses.">حلول متكاملة للبوابات والشيش الحصيرة والأبواب الأوتوماتيكية. تصميمات عصرية وجودة عالية لتوفير الأمان والخصوصية لمنزلك ومشروعك.</p>
+<div class="actions"><a class="btn btn-gold" href="#products" data-ar="اكتشف منتجاتنا　←" data-en="Explore products　→">اكتشف منتجاتنا　←</a><a class="btn btn-outline" href="#contact" data-ar="تواصل معنا" data-en="Get in touch">تواصل معنا</a></div>
+</div></div></section>
+<section class="section" id="products"><div class="container">
+<div class="section-head"><div class="eyebrow">OUR PRODUCTS</div><h2 data-ar="حلول ذكية لكل مدخل" data-en="Four ways to secure and simplify your entrance.">حلول ذكية لكل مدخل</h2><p data-ar="منتجات مصممة حسب المقاس، مع أنظمة تشغيل مريحة تناسب احتياجات منزلك أو مشروعك." data-en="Made-to-measure products with convenient motorised systems for your home or business.">منتجات مصممة حسب المقاس، مع أنظمة تشغيل مريحة تناسب احتياجات منزلك أو مشروعك.</p></div>
+<div class="products">
+<article class="product-card"><img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=900&q=80" alt="بوابة منزل عصرية" loading="lazy"><div class="product-body"><div class="product-icon">▥</div><h3 data-ar="البوابات الحصيرة" data-en="Automatic gates">البوابات الحصيرة</h3><p data-ar="تصميمات قوية وأنيقة، متحركة أو مفصلية، تناسب مختلف أنواع المباني." data-en="Elegant sliding and swing gates designed to suit different buildings.">تصميمات قوية وأنيقة، متحركة أو مفصلية، تناسب مختلف أنواع المباني.</p><a class="more" href="#contact" data-ar="اطلب التفاصيل ←" data-en="Ask for details →">اطلب التفاصيل ←</a></div></article>
+<article class="product-card"><img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=900&q=80" alt="واجهة منزل حديثة" loading="lazy"><div class="product-body"><div class="product-icon">▤</div><h3 data-ar="الشيش الحصيرة" data-en="Roller shutters">الشيش الحصيرة</h3><p data-ar="عزل وخصوصية وحماية من العوامل الجوية، للمنازل والمحلات والواجهات." data-en="Privacy, shade and protection from weather for homes and storefronts.">عزل وخصوصية وحماية من العوامل الجوية، للمنازل والمحلات والواجهات.</p><a class="more" href="#contact" data-ar="اطلب التفاصيل ←" data-en="Ask for details →">اطلب التفاصيل ←</a></div></article>
+<article class="product-card"><img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=80" alt="مدخل زجاجي عصري" loading="lazy"><div class="product-body"><div class="product-icon">⇆</div><h3 data-ar="الأبواب الأوتوماتيكية" data-en="Automatic doors">الأبواب الأوتوماتيكية</h3><p data-ar="راحة وسهولة في الاستخدام للمحلات والمكاتب والمباني ذات الحركة المستمرة." data-en="Smooth, hands-free access for shops, offices and busy buildings.">راحة وسهولة في الاستخدام للمحلات والمكاتب والمباني ذات الحركة المستمرة.</p><a class="more" href="#contact" data-ar="اطلب التفاصيل ←" data-en="Ask for details →">اطلب التفاصيل ←</a></div></article>
+<article class="product-card"><img src="https://images.unsplash.com/photo-1558008258-3256797b43f3?auto=format&fit=crop&w=900&q=80" alt="أنظمة تحكم وموتورات" loading="lazy"><div class="product-body"><div class="product-icon">⚙</div><h3 data-ar="الموتورات وأنظمة التحكم" data-en="Motors and controls">الموتورات وأنظمة التحكم</h3><p data-ar="أنظمة تشغيل وتحكم عن بُعد، مع ملحقات مناسبة للبوابات والشيش." data-en="Reliable motors, remote controls and accessories for gates and shutters.">أنظمة تشغيل وتحكم عن بُعد، مع ملحقات مناسبة للبوابات والشيش.</p><a class="more" href="#contact" data-ar="اطلب التفاصيل ←" data-en="Ask for details →">اطلب التفاصيل ←</a></div></article>
+</div></div></section>
+<section class="section about" id="about"><div class="container about-grid">
+<div class="about-photo"><img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1200&q=85" alt="تصميم بوابة ومدخل عصري" loading="lazy"><div class="experience"><div><strong data-ar="خبرة واهتمام بالتفاصيل" data-en="Experience in every detail">خبرة واهتمام بالتفاصيل</strong><div data-ar="من أول معاينة وحتى التسليم" data-en="From first visit to final handover">من أول معاينة وحتى التسليم</div></div><span style="font-size:28px;color:#efc76c">✧</span></div></div>
+<div class="about-copy"><div class="eyebrow" data-ar="من نحن" data-en="WHO WE ARE">من نحن</div><h2>DORTEC</h2><p data-ar="دورتيك متخصصة في حلول البوابات والشيش الحصيرة والأبواب الأوتوماتيكية. نهتم بتقديم تصميمات عصرية وخامات مناسبة وتنفيذ يراعي التفاصيل، لنساعدك على تحقيق الأمان والراحة والمظهر الذي يناسب المكان." data-en="DORTEC specialises in gates, roller shutters and automatic doors. We focus on modern designs, suitable materials and careful installation to bring security, comfort and a look that fits your space.">دورتيك متخصصة في حلول البوابات والشيش الحصيرة والأبواب الأوتوماتيكية. نهتم بتقديم تصميمات عصرية وخامات مناسبة وتنفيذ يراعي التفاصيل، لنساعدك على تحقيق الأمان والراحة والمظهر الذي يناسب المكان.</p>
+<div class="about-points"><div class="point"><div class="symbol">♢</div><b data-ar="جودة عالية" data-en="Quality">جودة عالية</b><span data-ar="اهتمام بالتفاصيل" data-en="Attention to detail">اهتمام بالتفاصيل</span></div><div class="point"><div class="symbol">⚙</div><b data-ar="تصميم عصري" data-en="Modern design">تصميم عصري</b><span data-ar="حلول عملية" data-en="Practical solutions">حلول عملية</span></div><div class="point"><div class="symbol">♧</div><b data-ar="دعم فني" data-en="Support">دعم فني</b><span data-ar="متابعة مستمرة" data-en="Ongoing assistance">متابعة مستمرة</span></div></div>
+<a class="btn btn-gold" href="#contact" data-ar="تواصل معنا　←" data-en="Contact us　→">تواصل معنا　←</a>
+</div></div></section>
+<section class="benefits"><div class="container benefit-grid">
+<div class="benefit"><div class="symbol">♢</div><h3 data-ar="أمان وخصوصية" data-en="Security & privacy">أمان وخصوصية</h3><p data-ar="حلول تساعد على حماية منزلك وممتلكاتك" data-en="Solutions to help protect your home and property">حلول تساعد على حماية منزلك وممتلكاتك</p></div>
+<div class="benefit"><div class="symbol">⚙</div><h3 data-ar="خامات عالية الجودة" data-en="Quality materials">خامات عالية الجودة</h3><p data-ar="اختيارات تناسب الاستخدام اليومي" data-en="Options suited to everyday use">اختيارات تناسب الاستخدام اليومي</p></div>
+<div class="benefit"><div class="symbol">▱</div><h3 data-ar="تركيب احترافي" data-en="Professional installation">تركيب احترافي</h3><p data-ar="اهتمام بالتنفيذ والتفاصيل" data-en="Careful installation and attention to detail">اهتمام بالتنفيذ والتفاصيل</p></div>
+<div class="benefit"><div class="symbol">☏</div><h3 data-ar="خدمة ما بعد البيع" data-en="After-sales service">خدمة ما بعد البيع</h3><p data-ar="تواصل ومتابعة عند الحاجة" data-en="Support and follow-up when needed">تواصل ومتابعة عند الحاجة</p></div>
+</div></section>
+<section class="section" id="process"><div class="container">
+<div class="section-head"><div class="eyebrow">HOW WE WORK</div><h2 data-ar="من أول زيارة إلى التسليم" data-en="From first visit to final handover.">من أول زيارة إلى التسليم</h2><p data-ar="خطوات واضحة لتسهيل تجربتك من البداية للنهاية." data-en="A clear process to make your experience straightforward from start to finish.">خطوات واضحة لتسهيل تجربتك من البداية للنهاية.</p></div>
+<div class="process"><div class="step"><strong>01</strong><h3 data-ar="المعاينة" data-en="Consult">المعاينة</h3><p data-ar="نستمع لاحتياجك ونحدد المقاسات." data-en="We listen to your needs and take measurements.">نستمع لاحتياجك ونحدد المقاسات.</p></div><div class="step"><strong>02</strong><h3 data-ar="التصميم" data-en="Design">التصميم</h3><p data-ar="تختار الشكل والتشطيب المناسب." data-en="You choose the style and finish.">تختار الشكل والتشطيب المناسب.</p></div><div class="step"><strong>03</strong><h3 data-ar="التركيب" data-en="Install">التركيب</h3><p data-ar="تنفيذ وتركيب مع اختبار التشغيل." data-en="Installation followed by an operation test.">تنفيذ وتركيب مع اختبار التشغيل.</p></div><div class="step"><strong>04</strong><h3 data-ar="الدعم" data-en="Support">الدعم</h3><p data-ar="متابعة وخدمة عند الحاجة." data-en="Follow-up and service when needed.">متابعة وخدمة عند الحاجة.</p></div></div>
+<div class="contact-band" id="contact"><div><h3 data-ar="خلينا نتكلم عن مشروعك" data-en="Let's talk about your project">خلينا نتكلم عن مشروعك</h3><p data-ar="تواصل معنا للاستفسار عن المنتجات أو طلب معاينة." data-en="Contact us to ask about products or request a visit.">تواصل معنا للاستفسار عن المنتجات أو طلب معاينة.</p></div><div class="actions"><a class="btn btn-gold" href="tel:+201024413139" data-ar="اتصل بنا" data-en="Call us">اتصل بنا</a><a class="btn" style="background:#102b40;color:white" href="https://wa.me/201024413139" target="_blank" rel="noopener" data-ar="راسلنا واتساب" data-en="WhatsApp us">راسلنا واتساب</a></div></div>
+</div></section>
+</main>
+<footer><div class="container"><div class="footer-grid">
+<div><a class="logo" href="#home"><span class="logo-mark">D</span><span>DORTEC<small>GATES · SHUTTERS · AUTOMATIC DOORS</small></span></a><p data-ar="حلول متكاملة للبوابات والشيش الحصيرة والأبواب الأوتوماتيكية." data-en="Complete solutions for gates, roller shutters and automatic doors.">حلول متكاملة للبوابات والشيش الحصيرة والأبواب الأوتوماتيكية.</p></div>
+<div><h3 data-ar="روابط سريعة" data-en="Quick links">روابط سريعة</h3><a href="#products" data-ar="منتجاتنا" data-en="Products">منتجاتنا</a><a href="#about" data-ar="من نحن" data-en="About us">من نحن</a><a href="#process" data-ar="كيف نعمل" data-en="How we work">كيف نعمل</a></div>
+<div><h3 data-ar="تواصل معنا" data-en="Contact">تواصل معنا</h3><a href="tel:+201024413139">01024413139</a><a href="https://wa.me/201024413139" target="_blank" rel="noopener">WhatsApp</a></div>
+</div><div class="copyright"><span>© 2026 DORTEC. All rights reserved.</span><span data-ar="بوابات وأبواب وشيش حصيرة أوتوماتيكي" data-en="Automatic gates, doors and shutters">بوابات وأبواب وشيش حصيرة أوتوماتيكي</span></div></div></footer>
+<a class="float-wa" href="https://wa.me/201024413139" target="_blank" rel="noopener">WhatsApp</a>
+<div class="toast" id="toast" role="status"></div>
+<script>
+const langBtn=document.getElementById('langBtn');
+const menuBtn=document.getElementById('menuBtn');
+const navlinks=document.getElementById('navlinks');
+let currentLang='ar';
+function setLanguage(lang){
+ currentLang=lang;
+ document.documentElement.lang=lang;
+ document.documentElement.dir=lang==='ar'?'rtl':'ltr';
+ document.querySelectorAll('[data-ar][data-en]').forEach(el=>{el.innerHTML=el.dataset[lang]});
+ langBtn.textContent=lang==='ar'?'English':'العربية';
+}
+langBtn.addEventListener('click',()=>setLanguage(currentLang==='ar'?'en':'ar'));
+menuBtn.addEventListener('click',()=>navlinks.classList.toggle('open'));
+navlinks.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>navlinks.classList.remove('open')));
+document.querySelectorAll('a[href="#contact"]').forEach(a=>a.addEventListener('click',()=>{document.getElementById('contact').scrollIntoView({behavior:'smooth'});}));
+</script>
+</body>
+</html>
